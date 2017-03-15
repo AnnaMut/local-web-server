@@ -7,7 +7,7 @@
 # local-web-server
 Fires up a simple, CORS-enabled, static web server on a given port. Use for local web development or file sharing (directory browsing enabled).
 
-![local-web-server](http://75lb.github.io/local-web-server/ws.gif)
+![local-web-server](https://raw.githubusercontent.com/75lb/local-web-server/prev/img/ws.gif)
 
 ## Install
 Ensure [node.js](http://nodejs.org) is installed first. Linux/Mac users may need to run the following commands with `sudo`.
@@ -171,7 +171,7 @@ Then pipe the `logstalgia` output format directly into logstalgia for real-time 
 $ ws -f logstalgia | logstalgia -
 ```
 
-![local-web-server with logstalgia](http://75lb.github.io/local-web-server/logstagia.gif)
+![local-web-server with logstalgia](https://raw.githubusercontent.com/75lb/local-web-server/prev/img/logstagia.gif)
 
 ## Use with glTail
 To use with [glTail](http://www.fudgie.org), write your log to disk using the "default" format:
