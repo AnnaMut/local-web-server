@@ -1,11 +1,9 @@
-[![view on npm](http://img.shields.io/npm/v/local-web-server.svg)](https://www.npmjs.org/package/local-web-server)
+[![view on npm](http://img.shields.io/npm/v/local-web-server/prev.svg)](https://www.npmjs.org/package/local-web-server)
 [![npm module downloads](http://img.shields.io/npm/dt/local-web-server.svg)](https://www.npmjs.org/package/local-web-server)
 [![Build Status](https://travis-ci.org/lwsjs/local-web-server.svg?branch=master)](https://travis-ci.org/lwsjs/local-web-server)
 [![Dependency Status](https://david-dm.org/lwsjs/local-web-server.svg)](https://david-dm.org/lwsjs/local-web-server)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 [![Join the chat at https://gitter.im/lwsjs/local-web-server](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lwsjs/local-web-server?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-***This project does not yet use the latest Koa modules (therefore some dependencies are out of date) because the recent Koa upgrade made node v7.6 the minimum supported version. This tool supports node v4 and higher. The next version of this tool is in progress and [available for preview](https://github.com/lwsjs/local-web-server/tree/next).***
 
 # local-web-server
 A simple web-server for productive front-end development. Typical use cases:
@@ -84,7 +82,7 @@ For the examples below, we assume we're in a project directory looking like this
 └── package.json
 ```
 
-**All paths/routes are specified using [express syntax](http://expressjs.com/guide/routing.html#route-paths)**. To run the example projects linked below, clone the project, move into the example directory specified, run `ws`.
+All paths/routes are specified using [express syntax](http://expressjs.com/guide/routing.html#route-paths). To run the example projects linked below, clone the project, move into the example directory specified, run `ws`.
 
 ### Static site
 
@@ -542,7 +540,7 @@ Instructions for how to visualise log output using goaccess, logstalgia or gltai
 Ensure [node.js](http://nodejs.org) is installed first. Linux/Mac users may need to run the following commands with `sudo`.
 
 ```sh
-$ npm install -g local-web-server
+$ npm install -g local-web-server@prev
 ```
 
 This will install the `ws` tool globally. To see the available options, run:
@@ -587,11 +585,12 @@ serving at http://localhost:8100
 
 
 * [local-web-server](#module_local-web-server)
-    * [localWebServer([options])](#exp_module_local-web-server--localWebServer) ⇒ <code>[KoaApplication](https://github.com/koajs/koa/blob/master/docs/api/index.md#application)</code> ⏏
+    * [localWebServer([options])](#exp_module_local-web-server--localWebServer) ⇒ [<code>KoaApplication</code>](https://github.com/koajs/koa/blob/master/docs/api/index.md#application) ⏏
         * [~rewriteRule](#module_local-web-server--localWebServer..rewriteRule)
 
 <a name="exp_module_local-web-server--localWebServer"></a>
-### localWebServer([options]) ⇒ <code>[KoaApplication](https://github.com/koajs/koa/blob/master/docs/api/index.md#application)</code> ⏏
+
+### localWebServer([options]) ⇒ [<code>KoaApplication</code>](https://github.com/koajs/koa/blob/master/docs/api/index.md#application) ⏏
 Returns a Koa application you can launch or mix into an existing app.
 
 **Kind**: Exported function  
@@ -611,7 +610,7 @@ Returns a Koa application you can launch or mix into an existing app.
         - [.options] <code>object</code> - [options](https://github.com/expressjs/morgan#options)
     - [.compress] <code>boolean</code> - Serve gzip-compressed resources, where applicable
     - [.mime] <code>object</code> - A list of mime-type overrides, passed directly to [mime.define()](https://github.com/broofa/node-mime#mimedefine)
-    - [.rewrite] <code>[Array.&lt;rewriteRule&gt;](#module_local-web-server--localWebServer..rewriteRule)</code> - One or more rewrite rules
+    - [.rewrite] [<code>Array.&lt;rewriteRule&gt;</code>](#module_local-web-server--localWebServer..rewriteRule) - One or more rewrite rules
     - [.verbose] <code>boolean</code> - Print detailed output, useful for debugging
 
 **Example**  
@@ -620,10 +619,11 @@ const localWebServer = require('local-web-server')
 localWebServer().listen(8000)
 ```
 <a name="module_local-web-server--localWebServer..rewriteRule"></a>
+
 #### localWebServer~rewriteRule
 The `from` and `to` routes are specified using [express route-paths](http://expressjs.com/guide/routing.html#route-paths)
 
-**Kind**: inner typedef of <code>[localWebServer](#exp_module_local-web-server--localWebServer)</code>  
+**Kind**: inner typedef of [<code>localWebServer</code>](#exp_module_local-web-server--localWebServer)  
 **Properties**
 
 | Name | Type | Description |
